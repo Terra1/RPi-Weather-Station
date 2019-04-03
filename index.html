@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>RPi Weather</title>
+		<style>
+		body {
+		background-color: lightblue;
+		}
+		</style>
+	</head>
+
+	<body>
+		<center>
+		<h1>Weather (according to my RPi)</h1>
+		<br>
+		<input type="button" value="Reload Page" onClick="document.location.reload(true)">
+		<h2>Temperature</h2>
+		<p><strong>Uncalibrated Temperature (in Celsius):</strong> {{ temp_c }}</p>
+		<p><strong>Calibrated Temperature (in Celsius):</strong> {{ calibrated_temp }}</p>
+		<p><strong>Calibrated Temperature (in Fahrenheit):</strong> {{ fahrenheit }}</p>
+		<br>
+		<h2>Humidity</h2>
+		<p>{{ humidity }}</p>
+		<br>
+		<h2>Pressure</h2>
+		<p>{{ pressure }}</p>
+		<br>
+		<br>
+		<h1>Pi Diagnostic Info</h1>
+		<p><strong>CPU Temperature (in Celsius):</strong> {{ cpu_temp }}</p>
+		<p><strong>CPU Usage:</strong> {{ cpu_usage }}</p>
+		<p><strong>RAM Usage:</strong> {{ ram_usage }}</p>
+		</center>
+	</body>
+</html>
